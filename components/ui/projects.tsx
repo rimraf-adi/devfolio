@@ -47,43 +47,41 @@ const grouped = {
 
 export default function Projects() {
   return (
-    <section className="w-full h-full p-6 md:p-8">
+    <section className="w-full h-full p-3 md:p-4">
       <div className="h-full flex flex-col">
-        <div className="mb-8">
-          <h2 className="text-2xl font-bold mb-4 tracking-tight">
-            <span style={{ fontFamily: 'var(--font-antic)' }}>Projects</span>
-          </h2>
-          <p style={{ fontFamily: 'var(--font-avenir)' }} className="text-gray-600 leading-relaxed tracking-wide">
-            A collection of my work in <span style={{ fontFamily: 'var(--font-antic)' }} className="font-medium">development</span> and <span style={{ fontFamily: 'var(--font-antic)' }} className="font-medium">machine learning</span>.
+        <div className="mb-4">
+          <h2 className="text-xl font-bold mb-2 tracking-tight" style={{ fontFamily: 'var(--font-antic)' }}>Projects</h2>
+          <p style={{ fontFamily: 'var(--font-avenir)' }} className="text-gray-600 text-sm leading-relaxed tracking-wide">
+            Here are some of the products and systems I've built, spanning developer tools, platforms, and machine learning infrastructure.
           </p>
         </div>
-        <div className="flex flex-col gap-10 w-full">
+        <div className="flex flex-col gap-6 w-full">
           {Object.entries(grouped).map(([category, items]) => (
-            <div key={category} className="flex flex-col gap-6 w-full">
-              <h3 className="text-lg font-semibold mb-2" style={{ fontFamily: 'var(--font-avenir)' }}>{category}</h3>
+            <div key={category} className="flex flex-col gap-3 w-full">
+              <h3 className="text-base font-semibold mb-1" style={{ fontFamily: 'var(--font-avenir)' }}>{category}</h3>
               {items.map((project) => (
                 <div
                   key={project.name}
-                  className="flex items-center bg-white rounded-2xl shadow-sm hover:shadow-md transition-all p-4 md:p-6 gap-4 md:gap-6 border border-gray-100 w-full"
+                  className="flex items-center bg-white rounded-xl shadow-sm hover:shadow-md transition-all p-3 md:p-4 gap-3 md:gap-4 border border-gray-100 w-full"
                 >
                   <div className="flex-shrink-0">
                     <img
                       src={project.image}
                       alt={project.name}
-                      className="w-20 h-20 md:w-24 md:h-24 rounded-xl object-cover bg-gray-100"
+                      className="w-16 h-16 md:w-20 md:h-20 rounded-lg object-cover bg-gray-100"
                     />
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2">
-                      <h4 style={{ fontFamily: 'var(--font-antic)' }} className="text-xl font-bold leading-tight truncate">{project.name}</h4>
+                      <h4 style={{ fontFamily: 'var(--font-antic)' }} className="text-lg font-bold leading-tight truncate">{project.name}</h4>
                     </div>
-                    <div style={{ fontFamily: 'var(--font-avenir)' }} className="text-gray-600 text-sm mt-1 truncate">
+                    <div style={{ fontFamily: 'var(--font-avenir)' }} className="text-gray-600 text-xs mt-1 truncate">
                       {project.subtitle}
                     </div>
                   </div>
                   <div className="ml-auto">
-                    <button className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-100 transition-colors">
-                      <ArrowUpRight className="w-5 h-5 text-gray-500" />
+                    <button className="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-100 transition-colors">
+                      <ArrowUpRight className="w-4 h-4 text-gray-500" />
                     </button>
                   </div>
                 </div>
