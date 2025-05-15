@@ -57,14 +57,14 @@ export default function Projects() {
             A collection of my work in <span style={{ fontFamily: 'var(--font-antic)' }} className="font-medium">development</span> and <span style={{ fontFamily: 'var(--font-antic)' }} className="font-medium">machine learning</span>.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="flex flex-col gap-10 w-full">
           {Object.entries(grouped).map(([category, items]) => (
-            <div key={category} className="flex flex-col gap-6">
+            <div key={category} className="flex flex-col gap-6 w-full">
               <h3 className="text-lg font-semibold mb-2" style={{ fontFamily: 'var(--font-avenir)' }}>{category}</h3>
               {items.map((project) => (
                 <div
                   key={project.name}
-                  className="flex items-center bg-white rounded-2xl shadow-sm hover:shadow-md transition-all p-4 md:p-6 gap-4 md:gap-6 border border-gray-100"
+                  className="flex items-center bg-white rounded-2xl shadow-sm hover:shadow-md transition-all p-4 md:p-6 gap-4 md:gap-6 border border-gray-100 w-full"
                 >
                   <div className="flex-shrink-0">
                     <img
