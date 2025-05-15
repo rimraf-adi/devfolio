@@ -29,7 +29,7 @@ export default function Home() {
               <Brands />
             </div>
 
-            {/* Projects Section */}
+
             <div className="bg-white rounded-3xl shadow-sm">
               <Projects />
             </div>
