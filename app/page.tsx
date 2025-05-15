@@ -43,7 +43,7 @@ export default function Home() {
             <Footer />
           </div>
 
-          {/* Sidebar - Spans 2 columns */}
+
           <div className="md:col-span-2 sticky top-8 h-[calc(100vh-4rem)]">
             <ExpertiseSidebar />
           </div>
